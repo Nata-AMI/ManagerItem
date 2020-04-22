@@ -18,6 +18,7 @@ class ProductManagerTest {
                 // используйте System.arraycopy, чтобы скопировать всё из result в tmp
                 tmp[tmp.length - 1] = product;
                 result = tmp;
+
             }
         }
         return result;
