@@ -1,4 +1,4 @@
-package ManagerItem;
+package ru.netology.managerItem;
 
 import java.util.Objects;
 
@@ -40,6 +40,49 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public class Book extends Product {
+        private String author;
+
+        public Book() {
+            super();
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public void setAuthor(String author) {
+            this.author = author;
+        }
+
+        public Book(int id, String name, int price, String author) {
+            this.author = author;
+
+        }
+    }
+
+    public class Smartphone extends Product {
+        private String producer;
+
+        public Smartphone (){
+            super();
+        }
+
+        public String getProducer() {
+            return producer;
+        }
+
+        public void setProducer(String producer) {
+            this.producer = producer;
+        }
+
+        public Smartphone(String producer) {
+            this.producer = producer;
+        }
+
+    }
+
 
     @Override
     public boolean equals(Object o) {

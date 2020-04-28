@@ -1,4 +1,4 @@
-package ManagerItem;
+package ru.netology.managerItem;
 
 import org.junit.jupiter.api.Test;
 
