@@ -41,6 +41,7 @@ public class Product {
         this.price = price;
     }
 
+
     public class Book extends Product {
         private String author;
 
