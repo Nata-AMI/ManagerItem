@@ -1,4 +1,4 @@
-package ru.netology.managerItem;
+package ru.netology.domain;
 
 import java.util.Objects;
 
@@ -42,47 +42,6 @@ public class Product {
     }
 
 
-    public class Book extends Product {
-        private String author;
-
-        public Book() {
-            super();
-        }
-
-        public String getAuthor() {
-            return author;
-        }
-
-        public void setAuthor(String author) {
-            this.author = author;
-        }
-
-        public Book(int id, String name, int price, String author) {
-            this.author = author;
-
-        }
-    }
-
-    public class Smartphone extends Product {
-        private String producer;
-
-        public Smartphone (){
-            super();
-        }
-
-        public String getProducer() {
-            return producer;
-        }
-
-        public void setProducer(String producer) {
-            this.producer = producer;
-        }
-
-        public Smartphone(String producer) {
-            this.producer = producer;
-        }
-
-    }
 
 
     @Override
