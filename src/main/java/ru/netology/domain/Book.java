@@ -3,9 +3,6 @@ package ru.netology.domain;
 public class Book extends Product {
     private String author;
 
-    public Book() {
-        super();
-    }
 
     public String getAuthor() {
         return author;

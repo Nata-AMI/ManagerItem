@@ -3,9 +3,6 @@ package ru.netology.domain;
 public class Smartphone extends Product {
     private String producer;
 
-    public Smartphone (){
-        super();
-    }
 
     public String getProducer() {
         return producer;
@@ -15,7 +12,7 @@ public class Smartphone extends Product {
         this.producer = producer;
     }
 
-    public Smartphone(String producer) {
+    public Smartphone(int id, String name, int price, String producer) {
         this.producer = producer;
     }
 
