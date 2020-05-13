@@ -25,28 +25,7 @@ public class ProductManager {
             return result;
         }
 
-        public boolean matches(Product product, String text) {
-            if (product instanceof Book) {
-                Book book = (Book) product;
-                if (book.getAuthor().equalsIgnoreCase(text)) {
-                    return true;
-                }
-                if (book.getName().equalsIgnoreCase(text)) {
-                    return true;
-                }
-            }
-            if (product instanceof Smartphone) {
-                Smartphone smartphone = (Smartphone) product;
-                if (smartphone.getProducer().equalsIgnoreCase(text)) {
-                    return true;
-                }
 
-                if (smartphone.getName().equalsIgnoreCase(text)) {
-                    return true;
-                }
-            }
-            return false;
-        }
     }
 
 

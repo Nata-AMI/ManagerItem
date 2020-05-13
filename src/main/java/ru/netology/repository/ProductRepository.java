@@ -21,13 +21,12 @@ public class ProductRepository {
     }
 
     public void removeById(int id) {
-        findAll(id);
         int length = products.length - 1;
         Product[] tmp = new Product[length];
         int index = 0;
-        for (Product item : products) {
-            if (item.getId() != id) {
-                tmp[index] = item;
+        for (Product product : ProductRepository.findAll()) {
+            if (product.getId() != id) {
+                tmp[index] = product;
                 index++;
             }
         }

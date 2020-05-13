@@ -1,5 +1,7 @@
 package ru.netology.domain;
 
+import ru.netology.productmanager.ProductManager;
+
 public class Book extends Product {
     private String author;
 
@@ -16,5 +18,10 @@ public class Book extends Product {
         super(id, name, price);
         this.author = author;
 
+    }
+
+     public boolean matches(String search) {
+         return super.matches(search) || ProductManager.searchBy("Author");
+        }
     }
 }
