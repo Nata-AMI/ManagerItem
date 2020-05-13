@@ -1,10 +1,12 @@
 package ru.netology.domain;
 
+import ru.netology.exception.NotFoundException;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import ru.netology.productmanager.ProductManager;
 import ru.netology.repository.ProductRepository;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class ProductManagerTest {
@@ -66,7 +68,7 @@ class ProductManagerTest {
         repository.save(smartphone2);
         repository.save(smartphone3);
 
-        Product[] products = repository.removeById(4);
+        Product[] products = repository.removeById(1);
         Assert.assertArrayEquals(new Product[]{smartphone1}, products);
 
     }
@@ -78,7 +80,7 @@ class ProductManagerTest {
         repository.save(smartphone3);
 
         Product[] products = repository.removeById(7);
-        Assert.assertArrayEquals(new Product[]{0}, products);
+        assertThrows(NotFoundException.class, () -> repository.removeById(7));
 
     }
 }
