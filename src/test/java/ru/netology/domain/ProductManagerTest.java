@@ -40,7 +40,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldRemoveById() {
+    public void shouldRemoveByIdBook() {
         repository.save(book1);
         repository.save(book2);
         repository.save(book3);
@@ -61,7 +61,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldRemoveById() {
+    public void shouldRemoveByIdSmartphone() {
         repository.save(smartphone1);
         repository.save(smartphone2);
         repository.save(smartphone3);
@@ -72,7 +72,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldRemoveById() {
+    public void shouldRemoveByIdIfNoExist() {
         repository.save(smartphone1);
         repository.save(smartphone2);
         repository.save(smartphone3);
