@@ -68,9 +68,8 @@ class ProductManagerTest {
         repository.save(smartphone2);
         repository.save(smartphone3);
 
-        Product[] products = repository.removeById(1);
+        Product[] products = repository.removeById(4);
         Assert.assertArrayEquals(new Product[]{smartphone1}, products);
-
     }
 
     @Test
@@ -79,8 +78,7 @@ class ProductManagerTest {
         repository.save(smartphone2);
         repository.save(smartphone3);
 
-        Product[] products = repository.removeById(7);
-        assertThrows(NotFoundException.class, () -> repository.removeById(7));
+         assertThrows(NotFoundException.class, () -> repository.removeById(7));
 
     }
 }

@@ -19,7 +19,11 @@ public class Smartphone extends Product {
         this.producer = producer;
     }
     public boolean matches(String search) {
-        return super.matches(search) || ProductManager.searchBy("Producer");
+        if (super.matches(search)) {
+            return true;
+        } else {
+            return this.getProducer().equalsIgnoreCase(search);
+        }
     }
 
 }

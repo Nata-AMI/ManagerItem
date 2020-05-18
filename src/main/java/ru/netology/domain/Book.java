@@ -20,8 +20,11 @@ public class Book extends Product {
 
     }
 
-     public boolean matches(String search) {
-         return super.matches(search) || ProductManager.searchBy("Author");
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        } else {
+            return this.getAuthor().equalsIgnoreCase(search);
         }
     }
 }
