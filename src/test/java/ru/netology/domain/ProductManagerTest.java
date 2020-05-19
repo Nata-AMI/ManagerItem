@@ -47,7 +47,7 @@ class ProductManagerTest {
         repository.save(book2);
         repository.save(book3);
 
-        assertThrows(NotFoundException.class, () -> repository.removeById(7));
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> repository.removeById(7));
 
     }
 
@@ -78,7 +78,7 @@ class ProductManagerTest {
         repository.save(smartphone2);
         repository.save(smartphone3);
 
-        assertThrows(NotFoundException.class, () -> repository.removeById(7));
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> repository.removeById(7));
 
     }
 }
